@@ -11,7 +11,7 @@ var isIE = function(version) {
 };
 
 var isIELegacyBrowsers = function(){
-  return isIE(6) || isIE(7) || isIE(8) || isIE(9) || isIE(10)
+  return isIE(6) || isIE(7) || isIE(8) || isIE(9) || isIE(10);
 };
 
 var isLegacyBrowsers = function(){
