@@ -1,7 +1,6 @@
 {
   "name": "browser-threshold",
   "version": "0.1.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,12 +15,12 @@
     "url": "https://github.com/raphaklaus/browser-threshold/issues"
   },
   "homepage": "https://github.com/raphaklaus/browser-threshold",
-  "dependencies": {
-    "is_js": "^0.8.0"
-  },
   "devDependencies": {
+    "chromedriver": "^2.21.2",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.0",
-    "jshint": "^2.9.1"
+    "ie64driver": "^2.48.0",
+    "iedriver": "^2.51.0",
+    "selenium-server-standalone-jar": "^2.52.0"
   }
 }
