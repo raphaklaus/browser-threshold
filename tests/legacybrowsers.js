@@ -1,5 +1,5 @@
 module.exports = {
-  'Firefox (latest): Should not show threshold' : function (browser) {
+  'Chrome (latest): Should not show threshold' : function (browser) {
     browser.url('http://localhost:8080').waitForElementVisible('body', 1000);
     browser.expect.element('#browser-threshold').to.not.be.present;
   },
