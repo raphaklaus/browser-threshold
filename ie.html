@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>IE Mocking Page</title>
+  <link rel="stylesheet" href="">
+  <script type="text/javascript">
+    var version = parseInt(location.href.split('=')[1]);
+    window.navigator.__defineGetter__('userAgent', function () { return 'msie ' + version;});
+  </script>
+  <script src="index.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+<body>
+  <p>Mocking test on Internet Explorer...</p>
+</body>
+</html>
