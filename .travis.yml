@@ -5,19 +5,20 @@ node_js:
 
 before_install:
   # Set chrome binary path
-  - export CHROME_BIN=/usr/bin/google-chrome
+  # - export CHROME_BIN=/usr/bin/google-chrome
+
   # Start xvfb
   # Set the xvfb screen size to 1280x1024x16
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
 
-  # Install web server
-  #- "npm install -g node-web-server"
-  # Background web server
-  - "http-server &"
   # Sleep some time to nws lift
   - "sleep 5"
   - "chmod +x ./test_runner"
+
+after_install:
+  # Background web server
+  - "nws &"
 
 script: ./test_runner
