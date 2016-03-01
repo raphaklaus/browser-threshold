@@ -13,10 +13,10 @@ before_install:
   - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
 
   # Install Google Chrome Latest Stable Version
-  - apt-get update
-  - apt-get install -y libappindicator1 fonts-liberation
+  - sudo apt-get update
+  - sudo apt-get install -y libappindicator1 fonts-liberation
   - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  - dpkg -i google-chrome*.deb
+  - sudo dpkg -i google-chrome*.deb
 
   # Install web server
   #- "npm install -g node-web-server"
