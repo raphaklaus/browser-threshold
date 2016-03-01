@@ -16,5 +16,6 @@ before_install:
   - "http-server &"
   # Sleep some time to nws lift
   - "sleep 5"
+  - "chmod +x ./test_runner"
 
 script: ./test_runner
