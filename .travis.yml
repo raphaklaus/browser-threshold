@@ -1,7 +1,11 @@
+sudo: required
 language: node_js
 node_js: 
   - "4.1"
   - "0.12"
+
+services:
+  - docker
 
 before_install:
   # Set chrome binary path
@@ -13,10 +17,12 @@ before_install:
   - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
 
   # Install Google Chrome Latest Stable Version
-  - sudo apt-get update
-  - sudo apt-get install -y libappindicator1 fonts-liberation
-  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-  - sudo dpkg -i google-chrome*.deb
+  # - sudo apt-get update
+  # - sudo apt-get install -y libappindicator1 fonts-liberation
+  # - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+  # - sudo dpkg -i google-chrome*.deb
+
+  - docker pull jess/chrome
 
   # Install web server
   #- "npm install -g node-web-server"
