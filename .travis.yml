@@ -13,12 +13,11 @@ before_install:
   - "sh -e /etc/init.d/xvfb start"
   - "/sbin/start-stop-daemon --start --quiet --pidfile /tmp/custom_xvfb_99.pid --make-pidfile --background --exec /usr/bin/Xvfb -- :99 -ac -screen 0 1280x1024x16"
 
+before_script:
   # Sleep some time to nws lift
-  - "sleep 5"
   - "chmod +x ./test_runner"
-
-after_install:
   # Background web server
   - "nws &"
+  - "sleep 5"
 
 script: ./test_runner
