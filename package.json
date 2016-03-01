@@ -16,8 +16,6 @@
     "chromedriver": "^2.21.2",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.0",
-    "ie64driver": "^2.48.0",
-    "iedriver": "^2.51.0",
     "selenium-server-standalone-jar": "^2.52.0"
   }
 }
