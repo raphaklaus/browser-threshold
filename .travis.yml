@@ -5,9 +5,9 @@ node_js:
 
 before_install:
   # Install web server
-  - "npm install -g node-web-server"
+  #- "npm install -g node-web-server"
   # Background web server
-  - "nohup nws"
+  - "http-server &"
   # Sleep some time to nws lift
   - "sleep 5"
 
