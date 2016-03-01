@@ -31,7 +31,7 @@
         "javascriptEnabled": true,
         "acceptSslCerts": true,
         "chromeOptions": {
-          "args": ["window-size=1280,800", "disable-web-security"]
+          "args": ["window-size=1280,800", "disable-web-security", "--no-sandbox"]
         }           
       }
     }
