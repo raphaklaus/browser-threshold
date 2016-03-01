@@ -4,6 +4,8 @@ node_js:
   - "0.12"
 
 before_install:
+  # Set chromium as browser
+  - export CHROME_BIN=chromium-browser
   # Start xvfb
   # Set the xvfb screen size to 1280x1024x16
   - "export DISPLAY=:99.0"
