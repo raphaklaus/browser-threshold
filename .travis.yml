@@ -8,5 +8,7 @@ before_install:
   -"npm install -g node-web-server"
   # Background web server
   -"nohup nws"
+  # Sleep some time to nws lift
+  -"sleep 5"
 
 script: ./test_runner
