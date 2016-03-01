@@ -16,6 +16,7 @@
     "chromedriver": "^2.21.2",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.0",
+    "nightwatch": "^0.8.16",
     "selenium-server-standalone-jar": "^2.52.0"
   }
 }
